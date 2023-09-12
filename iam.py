@@ -1,6 +1,6 @@
 from modules.utils.json import load_json
 from modules.utils.file import delete_file, rename_file, isFileExist
-from modules.provider.gcp.iam import IAM
+from modules.provider.gcp.iam_admin.iam import IAM
 
 
 if __name__ == "__main__":
