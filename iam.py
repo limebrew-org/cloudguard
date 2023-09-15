@@ -6,10 +6,10 @@ from modules.provider.gcp.iam_admin.iam import IAM
 if __name__ == "__main__":
     #?: Global Variables
     project_id = "your_project_id"
-    export_json_prev_path = "exports/iam_permissions_prev.json"
-    export_json_curr_path = "exports/iam_permissions_curr.json"
     credentials = "/path/to/your_service_account_key.json"
     service_account_id = "your-service-account-id"
+    export_json_prev_path = "exports/iam_permissions_prev.json"
+    export_json_curr_path = "exports/iam_permissions_curr.json"
 
     #? Initialize IAM module
     iam = IAM(

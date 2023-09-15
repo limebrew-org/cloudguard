@@ -2,9 +2,9 @@ from modules.provider.gcp.network.firewall import Firewall
 
 if __name__ == '__main__':
     #?: Global Variables
-    project_id = ""
-    credentials = ""
-    service_account_id = ""
+    project_id = "your_project_id"
+    credentials = "/path/to/your_service_account_key.json"
+    service_account_id = "your-service-account-id"
     
     #? List firewall rules
     firewall_client = Firewall(

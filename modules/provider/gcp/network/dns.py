@@ -37,7 +37,7 @@ class CloudDNS:
         zone_records_by_type = []
         zone_records = self.get_zone_records(zone_name)
         for zone_record in zone_records:
-            if zone_record.record_type == record_type:
+            if zone_record["type"] == record_type:
                 zone_records_by_type.append(zone_record)
         return zone_records_by_type
 
@@ -46,8 +46,9 @@ class CloudDNS:
         zone_records_by_name = []
         zone_records = self.get_zone_records(zone_name)
         for zone_record in zone_records:
-            if zone_record.name == record_name:
+            if zone_record["name"] == record_name:
                 zone_records_by_name.append(zone_record)
         return zone_records_by_name
         
 
+ 
