@@ -1,2 +1,2 @@
-# google_cloud_monitoring
-A repo consisting of automation scripts/CLI to monitor changes in google cloud infra
+# Google Cloud CSPM CLI
+A CLI built as a CSPM tool to monitor major Google Cloud Resources written in Python
