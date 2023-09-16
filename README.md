@@ -5,7 +5,7 @@ A CLI built as a CSPM (Cloud Security Posture Management) tool to monitor major 
 
 1. Configure cloud provider credentials:
 
-        cloudguard config --provider gcp  (settings credentials for a provider)
+        cloudguard config --provider gcp
 2. Run `cloudguard` with user prompt:
 
         cloudguard run
