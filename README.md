@@ -1,21 +1,26 @@
-# Cloud Guardian
+# Cloud Guard
 A CLI built as a CSPM (Cloud Security Posture Management) tool to monitor major cloud providers like GCP, AWS and Azure written in Python
 
 ## Documentation
 
-CLI commands:
+1. Configure cloud provider credentials:
 
-1. cloudguardian config --provider gcp  (settings credentials for a provider)
+        cloudguard config --provider gcp  (settings credentials for a provider)
+2. Run `cloudguard` with user prompt:
 
-2. cloudguardian run  (based on user prompt execute the commands)
+        cloudguard run
+3. Run `cloudguard` with arguments:
 
-3. cloudguardian run --provider gcp --all -export-json  (run all supported services for the provider)
+        cloudguard run --provider gcp --all -export-json
+4. Run `cloudguard` and list the supported resources for a cloud provider
 
-4. cloudguardian run --provider gcp list   (list all supported provider services)
+        cloudguard run --provider gcp list
+5. List all supported cloud providers:
 
-5. cloudguardian providers list   (list all available cloud providers)
+        cloudguard providers list
+6. Help:
 
-6. cloudguardian --help (Default: help for more information)
+        cloudguard --help 
 
 
 ## References:
