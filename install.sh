@@ -3,7 +3,7 @@
 PY_VERSION="3.11"
 
 #? virtaul environment name
-ENV_NAME="gcloud_monitoring"
+ENV_NAME="cloudguardian"
 
 #? Create environment
 conda create -n $ENV_NAME python=$PY_VERSION -y
