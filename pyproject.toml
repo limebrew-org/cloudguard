@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "cloudguard"
+version = "0.1.0"
+description = "A CLI built as a CSPM (Cloud Security Posture Management) tool to monitor major cloud providers like GCP, AWS and Azure written in Python"
+authors = ["deepraj1729 <deeprajbaidyaofficial@gmail.com>", "Saptaktdk <saptakdev123@gmail.com>"]
+readme = "README.md"
+packages = [{include = "cloudguard"}]
+
+[tool.poetry.dependencies]
+python = "^3.11.5"
+google-api-python-client = "2.95.0"
+google-auth-httplib2 = "0.1.0"
+google-auth-oauthlib = "1.0.0"
+google-auth = "2.17.1"
+google-cloud-compute = "1.13.0"
+google-cloud-dns = "0.34.1"
+google-cloud-storage = "2.10.0"
+typer = "0.9.0"
+typing_extensions = "4.7.1"
+
+[tool.poetry.scripts]
+cloudguard = "cloudguard.main:cloudguard"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

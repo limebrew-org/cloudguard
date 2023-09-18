@@ -6,6 +6,12 @@ POETRY_VERSION="1.4.2"
 #? virtaul environment name
 ENV_NAME="cloudguard"
 
+#? Deactivate environment
+source ~/miniconda3/bin/deactivate
+
+#? Remove environment
+conda env remove -n $ENV_NAME
+
 #? Create environment
 conda create -n $ENV_NAME python=$PY_VERSION -y
 
