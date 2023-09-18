@@ -7,4 +7,4 @@ ENV_NAME="cloudguard"
 source ~/miniconda3/bin/activate $ENV_NAME
 
 #? Run CLI
-python cloudguardian.py run --provider gcp 
+poetry run cloudguard providers
