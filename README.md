@@ -14,13 +14,13 @@ A CLI built as a CSPM (Cloud Security Posture Management) tool to monitor major 
         cloudguard run --provider gcp --all -export-json
 4. Run `cloudguard` and list the supported resources for a cloud provider
 
-        cloudguard run --provider gcp list
+        cloudguard run --provider gcp --list
 5. List all supported cloud providers:
 
         cloudguard providers list
 6. Help:
 
-        cloudguard --help 
+        cloudguard --help
 
 
 ## References:

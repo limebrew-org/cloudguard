@@ -1,5 +1,6 @@
 import typer
 from typing_extensions import Annotated
+from cloudguard.providers.list import provider_modules
 
 cloudguard = typer.Typer()
 
@@ -9,18 +10,18 @@ def config(provider:Annotated[str, typer.Option("--provider")]):
 
 @cloudguard.command()
 def providers():
-    providers_list = ["GCP", "AWS", "Azure"]
-
-    for i in range(0, len(providers_list)):
-        print("[{}] {}".format(i+1, providers_list[i]))
+    for idx,provider in enumerate(provider_modules.keys()):
+        print("[{}] {}".format(idx+1,provider))
 
 @cloudguard.command()
 def run(
-    provider: Annotated[str, typer.Option("--provider")] = None,
+    provider: Annotated[str, typer.Option("--provider")],
     is_all_selected: Annotated[bool, typer.Option("--all")] = False,
     export_json: Annotated[str, typer.Option("-export-json")] = "output.json",
-    list_resources: Annotated[bool, typer.Option("--list")] = False):
-    print("Running cloudguard for {} , all:{} export-path: {}".format(provider,is_all_selected,export_json))
+    is_list_resources: Annotated[bool, typer.Option("--list")] = False):
 
-    if list_resources:
+    if is_list_resources:
         print("Listing resources for provider: {}".format(provider))
+        for idx,resource in enumerate(provider_modules[provider]):
+            print("[{}] {}".format(idx+1, resource))
+        exit()

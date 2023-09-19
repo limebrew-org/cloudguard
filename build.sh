@@ -6,5 +6,5 @@ ENV_NAME="cloudguard"
 #? Activate environment
 source ~/miniconda3/bin/activate $ENV_NAME
 
-#? Run CLI
-poetry run cloudguard run --provider gcp --list
+#? Build package
+poetry build
