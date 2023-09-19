@@ -17,7 +17,6 @@ class CloudStorage:
         return self.client.list_buckets()
     
     def is_bucket_public(self, bucket_name:str) -> bool:
-
         # Get the bucket object
         bucket = self.client.get_bucket(bucket_name)
 
